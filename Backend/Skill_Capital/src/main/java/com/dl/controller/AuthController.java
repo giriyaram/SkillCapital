@@ -37,6 +37,6 @@ public class AuthController {
     
     @GetMapping("/hello")
     public String sayHello(){
-        return "Hello";
+        return "Hello world!";
     }
 }
