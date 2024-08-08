@@ -1,0 +1,17 @@
+{"properties": [
+  {
+    "name": "spring.app.jwtSecret",
+    "type": "java.lang.String",
+    "description": "It is the secret key that is used for encryption"
+  },
+  {
+    "name": "spring.app.jwtExpirationMs",
+    "type": "java.lang.String",
+    "description": "It is the time to expire the user session in milliseconds"
+  },
+  {
+    "name": "spring.app.jwtExpirationInMsRememberMe",
+    "type": "java.lang.String",
+    "description": "It is the time to expire the user session in milliseconds if the user clicks remember me, typically 30 days"
+  }
+]}
