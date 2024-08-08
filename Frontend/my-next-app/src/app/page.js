@@ -43,11 +43,7 @@ export default function LoginPage() {
                 });
 
                 if (response.status === 200) {
-<<<<<<< HEAD
-                    <Link href={'/success/page.js'}></Link>
-=======
                     <Link href={'/success'}></Link>
->>>>>>> 836c21f2709466388a0506b867888478283394bf
                 }
             } catch (error) {
                 if (error.response && error.response.status === 401) {
