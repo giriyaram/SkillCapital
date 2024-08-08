@@ -43,7 +43,7 @@ export default function LoginPage() {
                 });
 
                 if (response.status === 200) {
-                    <Link href={'/success/page.js'}></Link>
+                    <Link href={'/success'}></Link>
                 }
             } catch (error) {
                 if (error.response && error.response.status === 401) {
