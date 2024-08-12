@@ -29,8 +29,7 @@ public class JwtService {
     @Value("${spring.app.jwtExpirationMs}")
     private int jwtExpirationMs;
 
-    @Value("${app.jwtExpirationInMsRememberMe}")
-    private int jwtExpirationInMsRememberMe;
+    
 
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
