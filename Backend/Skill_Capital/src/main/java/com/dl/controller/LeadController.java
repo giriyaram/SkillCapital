@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 
-@Tag(name = "CRM Application REST APIs for User Resources", description = "- GellALLLeads, GetLeadById, DeleteLeadById, UpdateLead, PostLead")
+@Tag(name = "CRM Application REST APIs for Lead Resources", description = "- GellALLLeads, GetLeadById, DeleteLeadById, UpdateLead, PostLead")
 @RestController
 @RequestMapping("api/leads")
 public class LeadController {
