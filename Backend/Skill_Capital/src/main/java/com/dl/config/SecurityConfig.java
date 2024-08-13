@@ -26,7 +26,11 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
+                        // Permit access to Swagger UI and API documentation
+                        .requestMatchers("/swagger-ui/**", "/v3/api-docs/**", "/swagger-ui.html").permitAll()
+                        // Permit access to authentication endpoints
                         .requestMatchers("/api/v1/auth/**").permitAll()
+                        // All other requests require authentication
                         .anyRequest().authenticated())
                 .sessionManagement(sess -> sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authenticationProvider(authenticationProvider)
@@ -34,7 +38,5 @@ public class SecurityConfig {
 
         return http.build();
     }
-
-   
 
 }
